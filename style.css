@@ -49,27 +49,28 @@ h1 {
 @media (max-width: 600px) {
   #thankyou-message {
     display: none; /* Stays hidden until YES is clicked */
-    position: fixed !important; /* Locks it to the phone screen */
+    position: fixed !important;
     top: 0;
     left: 0;
     width: 100vw !important;
     height: 100vh !important;
-    background-color: #ffe6e6 !important; /* Covers the first page completely */
-    z-index: 9999 !important; /* Makes sure it's on top of everything */
+    background-color: #ffe6e6 !important;
+    z-index: 9999 !important;
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: flex-start !important; /* Start from top to control spacing */
   }
 
   #thankyou-message h1 {
     font-size: 1.6rem !important;
     width: 85% !important;
     text-align: center !important;
-    margin-top: 0 !important;
+    margin-top: 160px !important; /* Pushes text down away from top bears */
+    line-height: 1.4 !important;
   }
 
   #thankyou-message img {
-    max-width: 90px !important; /* Smaller bears so they don't hit the text */
+    max-width: 90px !important; /* Keeps bears small enough for corners */
     height: auto !important;
   }
 }
