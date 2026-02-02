@@ -48,23 +48,28 @@ h1 {
 }
 @media (max-width: 600px) {
   #thankyou-message {
-    display: flex !important;
+    display: none; /* Stays hidden until YES is clicked */
+    position: fixed !important; /* Locks it to the phone screen */
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: #ffe6e6 !important; /* Covers the first page completely */
+    z-index: 9999 !important; /* Makes sure it's on top of everything */
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: flex-start !important;
-    padding-top: 180px !important; /* Pushes text way down below the top bears */
+    justify-content: center !important;
   }
 
   #thankyou-message h1 {
     font-size: 1.6rem !important;
+    width: 85% !important;
     text-align: center !important;
-    line-height: 1.3 !important;
-    margin: 0 !important;
-    width: 90% !important;
+    margin-top: 0 !important;
   }
 
   #thankyou-message img {
-    max-width: 80px !important; /* Shrinks bears so they stay in corners */
+    max-width: 90px !important; /* Smaller bears so they don't hit the text */
     height: auto !important;
   }
 }
